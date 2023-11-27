@@ -1,7 +1,6 @@
 public class Homework_Leson13
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         /*Task 1
 -Cоздать массив строк fruits (фрукты) из 4 элементов: Orange,Apple,Banana,Mango.
 -Вывести созданный массив на экран используя цикл for.
@@ -11,15 +10,13 @@ public class Homework_Leson13
 
         String[] fruits = {"Orange", "Apple", "Banana", "Mango"};
         int a = 0;
-        for (a=0; a< fruits.length; a++)
-        {
-            System.out.println((a+1) + " fruit is " + fruits[a]);
+        for (a = 0; a < fruits.length; a++) {
+            System.out.println((a + 1) + " fruit is " + fruits[a]);
         }
         System.out.println("\nThe new list of fruits:");
         fruits[0] = "Kiwi";
-        for (a=0; a< fruits.length; a++)
-        {
-            System.out.println((a+1) + " fruit is " + fruits[a]);
+        for (a = 0; a < fruits.length; a++) {
+            System.out.println((a + 1) + " fruit is " + fruits[a]);
         }
         System.out.println(" ");
 
@@ -27,9 +24,8 @@ public class Homework_Leson13
 Используя цикл for вывести на экран все четные элементы массива fruits из первой задачи.
 Задание можно выполнить непосредственно в методе main либо создать отдельный метод.*/
 
-        for (a=0; a< fruits.length;a=a+2)
-        {
-            System.out.println(fruits[a+1]);
+        for (a = 0; a < fruits.length; a = a + 2) {
+            System.out.println(fruits[a + 1]);
 
         }
         System.out.println(" ");
@@ -38,13 +34,18 @@ public class Homework_Leson13
 Дан массив целых чисел. Написать метод, возвращающий наименьший элемент массива.
 public static int findMin(int[] ints)   */
 
-        int [] numbers = {25, 7, 2, 13, 34, 49};
-        int min = numbers[0];
-        for(int b=0; b<numbers.length; b++)
-        {
-            if (numbers[b]<min)
-                min = numbers[b];
-        }
-        System.out.println("Minimal number of this array is " + min);
+        int[] numbers = {25, 7, 2, 13, 34, 49};
+        System.out.println("Minimal number of this array is " + findMinimal(numbers));
     }
-}
+        public static int findMinimal (int[]numbers)
+        {
+            int min = numbers[0];
+            for (int b = 0; b < numbers.length; b++) {
+                if (numbers[b] < min)
+                    min = numbers[b];
+            }
+
+            return min;
+        }
+    }
+
