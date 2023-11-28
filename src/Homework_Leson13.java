@@ -24,11 +24,21 @@ public class Homework_Leson13
 Используя цикл for вывести на экран все четные элементы массива fruits из первой задачи.
 Задание можно выполнить непосредственно в методе main либо создать отдельный метод.*/
 
+        System.out.println("Even Fruit from the list:");
         for (a = 0; a < fruits.length; a = a + 2) {
             System.out.println(fruits[a + 1]);
 
         }
         System.out.println(" ");
+
+        System.out.println("Even elements from the Array:");
+        for (a = 0; a< fruits.length; a++)
+        {
+            if (a%2 == 0)
+            {
+                System.out.println(fruits[a]);
+            }
+        }
 
         /*Task 3
 Дан массив целых чисел. Написать метод, возвращающий наименьший элемент массива.
